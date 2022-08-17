@@ -1,0 +1,57 @@
+/* Base Styling */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1B1B1E;
+    color: #FBFFFE;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.app {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.country-graph {
+    background-color: #DECDF5;
+    color: #1B1B1E;
+    font-weight: bold;
+    padding: 2rem 2rem;
+    width: 100%;
+}
+
+.bar-container {
+    min-height: 50px;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
+}
+
+.bar {
+    background-color: #916953;
+    height: 30px;
+    margin: 0 10px;
+    text-align: center;
+    padding-top: 2px;
+    max-width: 77%;
+}
+
+.bar-container .population {
+    flex: 3;
+    text-align: right;
+}
+
+.bar-container .country {
+    width: 80px;
+    display: block;
+    text-overflow: ellipsis;
+}
