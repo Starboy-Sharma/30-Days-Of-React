@@ -1,0 +1,99 @@
+/* Base Styling */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #EEC8E0;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+/* THEME */
+.light-theme {
+    background-color: #FBFFFE;
+    color: #1B1B1E;
+}
+
+.dark-theme {
+    background-color: #1B1B1E;
+    color: #FBFFFE;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+/* Profile Card */
+
+.profile-card {
+    /* background-color: #392F5A; */
+    padding: 0.5rem 2rem;
+    min-height: 40vh;
+    font-size: 14px;
+}
+
+.profile-card .profile-image {
+    background-image: url("./images/profile.jpg");
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin-top: 1.4rem;
+
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.profile-card h1 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.profile-card p {
+    font-size: 15px;
+    margin-top: 1rem;
+    /* color: gainsboro; */
+}
+
+.profile-card h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.profile-card .skills {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.profile-card .skills span {
+    margin-right: 0.5rem;
+    background-color: #EEC8E0;
+    color: #1B1B1E;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.profile-card .timeline {
+    font-size: 12px;
+    /* color: lightgray; */
+    margin-top: 0;
+}
