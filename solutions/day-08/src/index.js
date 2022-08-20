@@ -6,6 +6,8 @@ import htmlImg from "./images/html.png";
 import cssImg from "./images/css.png";
 import reactImg from "./images/react.png";
 
+import { countriesData } from "./data/countries";
+
 import "./App.css";
 
 const root = document.querySelector("#root");
@@ -78,7 +80,47 @@ const Subscribe = () => (
   </section>
 );
 
+
+function getRandomCountry() {
+  return countriesData[Math.floor(Math.random() * countriesData.length)];
+}
+
+const Country = () => {
+
+  const [country, setCountry] = useState(getRandomCountry())
+
+  console.log(getRandomCountry());
+
+  const handleSelectCountry = () => {
+
+    let newCountry = getRandomCountry();
+
+    setCountry(newCountry);
+  };
+
+  return (
+    <section className="random-country">
+      
+
+      <div className="country-card">
+
+        <img src={country.flag} alt="Country" />
+
+        <p> <b>Capital: </b> {country.capital} </p>
+        <p> <b>Language: </b> {country.languages} </p>
+        <p> <b>Population: </b> {country.population} </p>
+        <p> <b>Currency: </b> {country.currency} </p>
+
+      </div>
+
+      <button onClick={handleSelectCountry}> Select Country </button>
+    </section>
+  )
+
+}
+
 const ProfileCard = (props) => {
+
 
   const [theme, setTheme] = useState('light-theme');
   const [toggleTheme, setToggleTheme] = useState(false);
@@ -131,6 +173,9 @@ const app = (
     <HexaColor color={hexaColor()} />
     <HexaColor color={hexaColor()} />
     <HexaColor color={hexaColor()} /> */}
+
+    <Country />
+
     <ProfileCard
       username="Pankaj Sharma"
       designation="Software Engineer"
