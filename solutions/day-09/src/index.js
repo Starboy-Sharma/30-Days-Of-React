@@ -74,9 +74,16 @@ const Time = () => {
 };
 
 const App = () => (
-  <div className="app">
-    <Season />
-    <Time />
+  <div className="container">
+
+    <h1> 30 Days of React </h1>
+
+    <div className="app">
+
+      <Season />
+      <Time />
+
+    </div>
   </div>
 );
 
